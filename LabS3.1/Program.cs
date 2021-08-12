@@ -30,23 +30,23 @@ namespace LabS3
                 {
                     if (th2 == true)
                     {
-                        Console.WriteLine("a,b va c khong duoc bang nhau.");
+                        Console.WriteLine("ba so khong duoc bang nhau.");
                         break;
                     }
                     else
                     {
-                        Console.WriteLine("a va b khong duoc bang nhau.");
+                        Console.WriteLine("hai so khong duoc bang nhau.");
                         break;
                     }
                 }
                 if (th2 == true)
                 {
-                    Console.WriteLine("b va c khong duoc bang nhau");
+                    Console.WriteLine("hai so khong duoc bang nhau");
                     break;
                 }
                 if (th3 == true)
                 {
-                    Console.WriteLine("a va c khong duoc bang nhau");
+                    Console.WriteLine("hai so khong duoc bang nhau");
                     break;
                 }
 
@@ -62,7 +62,15 @@ namespace LabS3
                         }
                         break;
                     case false:
-                        max = b;
+                        switch (b > c)
+                        {
+                            case true:
+                                max = b;
+                                break;
+                            case false:
+                                max = c;
+                                break;
+                        }
                         break;
                 }
                 Console.WriteLine("Max trong 3 so {0}, {1}, {2} la {3} ", a, b, c, max);
